@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yodit Dejene — Portfolio</title>
+    <meta
+      name="description"
+      content="Executive portfolio of Yodit Dejene (MBA) — 6+ years driving adolescent SRHR, gender equality, institutional safeguarding, and community empowerment initiatives across Ethiopia and East Africa."
+    />
+    <!-- OpenGraph Social Share Card -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yodit Dejene — Portfolio" />
+    <meta
+      property="og:description"
+      content="Executive portfolio of Yodit Dejene (MBA) — 6+ years driving adolescent SRHR, gender equality, institutional safeguarding, and community empowerment initiatives across Ethiopia and East Africa."
+    />
+    <meta property="og:image" content="/og-preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Yodit Dejene — Safeguarding Manager & Program Director" />
+    <meta property="og:site_name" content="Yodit Dejene Portfolio" />
+    <!-- Twitter / X Social Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yodit Dejene — Safeguarding Manager & Program Director" />
+    <meta
+      name="twitter:description"
+      content="Executive portfolio of Yodit Dejene (MBA) — 6+ years driving adolescent SRHR, gender equality, institutional safeguarding, and community empowerment initiatives across Ethiopia and East Africa."
+    />
+    <meta name="twitter:image" content="/og-preview.jpg" />
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yodit Dejene",
+        "jobTitle": "Safeguarding Manager & Program Director",
+        "description": "Leader in adolescent Sexual and Reproductive Health and Rights (SRHR), gender equality, and community empowerment across Ethiopia and Africa.",
+        "image": "/lv_0_20261002185044.jpg"
+      }
+    </script>
+    <script>
+      (function() {
+        try {
+          // Rule 1: Always default to LIGHT mode on both mobile and desktop.
+          // Rule 2: Completely ignore system/browser dark mode (prefers-color-scheme).
+          // Rule 3: Mobile view (< 1024px) is strictly light mode ("unless it changed manually only on desktop view").
+          var isDesktop = window.innerWidth >= 1024;
+          var stored = localStorage.getItem('theme');
+          if (isDesktop && stored === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-background text-foreground transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

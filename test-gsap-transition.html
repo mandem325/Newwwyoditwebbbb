@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        background: yellow;
+        overflow: hidden;
+      }
+      .transition {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9999;
+      }
+      .transition svg {
+        width: 100vw;
+        height: 100vh;
+        color: #2b1b81;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="transition">
+      <svg viewBox="0 0 1080 1080" preserveAspectRatio="none">
+        <path
+          id="path"
+          d="M66.858-19C57.597 196.452 127.164 482.585 206.5 464.5c125.428-28.592 52.293-293.51 200.001-339 568.234-175-241.425 712.6 15.5 803.02C645 1007 629.398 499 810.5 499c113.398 0 106.54 189.465 164.235 429.52 48.005 199.72 89.415 213.09 105.265 173.78"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+    </div>
+    <script>
+      // Simple drawSVG simulation since we don't have the premium plugin
+      const path = document.getElementById("path");
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+
+      // startLeave (painting ON)
+      gsap
+        .timeline()
+        .set(path, { strokeWidth: "8%" })
+        .to(path, {
+          keyframes: {
+            "15%": { strokeWidth: "8%" },
+            "90%": { strokeDashoffset: 0 },
+            "100%": { strokeWidth: "70%" },
+          },
+          duration: 1.25,
+        });
+    </script>
+  </body>
+</html>

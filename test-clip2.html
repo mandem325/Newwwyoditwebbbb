@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        background: red;
+        height: 2000px;
+        margin: 0;
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 255, 0, 0.5);
+        clip-path: url(#my-clip);
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0">
+      <defs>
+        <clipPath id="my-clip" clipPathUnits="userSpaceOnUse">
+          <path
+            d="M0,0 h1000 v1000 h-1000 Z M100,100 h100 v100 h-100 Z"
+            clip-rule="evenodd"
+            fill-rule="evenodd"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+    <div class="overlay">Overlay</div>
+  </body>
+</html>
